@@ -5,7 +5,7 @@
   "main": "src/frontend/Javascript/app.js",
   "scripts": {
     "build": "npm run build:pug && npm run build:css && npm run build:js && npm run build:assets",
-    "build:pug": "pug \"src/frontend/Templates/*.pug\" -o dist/",
+    "build:pug": "node build-pug.js",
     "build:css": "stylus \"src/frontend/Styles/main.styl\" -o dist/css/ && stylus \"src/frontend/Styles/card.styl\" -o dist/css/",
     "build:js": "browserify \"src/frontend/Javascript/app.js\" -o dist/js/bundle.js && cpx \"src/frontend/Javascript/snow.js\" dist/js/ && cpx \"src/frontend/Javascript/lantern.js\" dist/js/",
     "build:assets": "cpx \"src/frontend/Assets/**/*\" dist/images/",
