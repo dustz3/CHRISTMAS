@@ -1,0 +1,105 @@
+@import 'variables'
+
+// Card Container
+.card-container
+  display flex
+  justify-content center
+  align-items center
+  min-height 100vh
+  background-color $bg-color
+  padding $spacing-md
+
+// Card - Circular with radial gradient
+.card
+  background radial-gradient(circle, $secondary-color 0%, $secondary-color 80%, $primary-color 100%)
+  border 1px solid #e0e0e0
+  border-radius 50%
+  box-shadow 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.3)
+  width 500px
+  height 500px
+  overflow hidden
+  position relative
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+// Card Header
+.card-header
+  padding $spacing-md
+  padding-bottom $spacing-sm
+  background-color transparent
+  text-align center
+  position relative
+  z-index 5
+
+.card-title
+  margin 0
+  font-size 1.5rem
+  font-weight 600
+  color #fff
+
+// Bonheur Royale font for Merry Christmas 2025
+.merry-christmas
+  font-family 'Bonheur Royale', cursive
+  font-size 2.2rem
+  font-weight normal
+  text-align center
+  color #fff
+  margin 0
+
+// Card Body
+.card-body
+  padding $spacing-sm $spacing-md
+  background-color transparent
+  text-align center
+  flex 1
+  display flex
+  align-items center
+  justify-content center
+  position relative
+  z-index 5
+
+.card-content
+  margin 0
+  color #fff
+  line-height 1.6
+
+// Card Footer
+.card-footer
+  padding $spacing-md
+  padding-top $spacing-sm
+  background-color transparent
+  width 100%
+
+.card-actions
+  display flex
+  gap $spacing-sm
+  justify-content center
+
+// Buttons
+.btn
+  padding 0.75rem 1.5rem
+  border none
+  border-radius 4px
+  font-size 1rem
+  cursor pointer
+  transition all 0.3s ease
+
+  &:hover
+    opacity 0.9
+    transform scale(1.02)
+
+.btn-primary
+  background-color $primary-color
+  color $bg-color
+
+  &:hover
+    background-color darken($primary-color, 10%)
+
+.btn-secondary
+  background-color #f5f5f5
+  color $text-color
+
+  &:hover
+    background-color #e0e0e0

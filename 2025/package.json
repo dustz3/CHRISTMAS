@@ -1,0 +1,35 @@
+{
+  "name": "christmas-2025",
+  "version": "1.0.0",
+  "description": "Christmas 2025 前後端應用專案",
+  "main": "src/frontend/Javascript/app.js",
+  "scripts": {
+    "build": "npm run build:pug && npm run build:css && npm run build:js && npm run build:assets",
+    "build:pug": "pug \"src/frontend/Templates/*.pug\" -o dist/",
+    "build:css": "stylus \"src/frontend/Styles/main.styl\" -o dist/css/ && stylus \"src/frontend/Styles/card.styl\" -o dist/css/",
+    "build:js": "browserify \"src/frontend/Javascript/app.js\" -o dist/js/bundle.js && cpx \"src/frontend/Javascript/snow.js\" dist/js/ && cpx \"src/frontend/Javascript/lantern.js\" dist/js/",
+    "build:assets": "cpx \"src/frontend/Assets/**/*\" dist/images/",
+    "watch": "npm run watch:pug & npm run watch:css & npm run watch:js",
+    "watch:pug": "pug -w \"src/frontend/Templates/*.pug\" -o dist/",
+    "watch:css": "stylus -w \"src/frontend/Styles/main.styl\" -o dist/css/ & stylus -w \"src/frontend/Styles/card.styl\" -o dist/css/",
+    "watch:js": "watchify \"src/frontend/Javascript/app.js\" -o dist/js/bundle.js -v",
+    "dev": "npm run build && npx http-server dist -p 3000 -o"
+  },
+  "keywords": [
+    "christmas",
+    "2025",
+    "frontend",
+    "backend"
+  ],
+  "author": "Aries Hsieh",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "cpx": "^1.0.0",
+    "http-server": "^14.1.1",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.63.0",
+    "watchify": "^4.0.0"
+  }
+}

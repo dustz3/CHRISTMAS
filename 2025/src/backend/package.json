@@ -1,0 +1,19 @@
+{
+  "name": "christmas-2025-backend",
+  "version": "1.0.0",
+  "description": "Christmas 2025 後端 API",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
+  },
+  "keywords": [
+    "api",
+    "backend",
+    "christmas"
+  ],
+  "author": "Aries Hsieh",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
