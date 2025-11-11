@@ -87,7 +87,7 @@
     
     // Random horizontal drift (within card) - more random
     const drift = (Math.random() - 0.5) * 200 + (Math.random() - 0.5) * 100; // More random: -150px to +150px
-    const riseHeight = 500 + 50; // Card height is 500px, rise above it
+    const riseHeight = 700 + 50; // Card height is 700px, rise above it
     
     card.appendChild(lantern);
     

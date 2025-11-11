@@ -9,14 +9,14 @@
   background-color $bg-color
   padding $spacing-md
 
-// Card - Circular with radial gradient
+// Card - Rectangular with radial gradient
 .card
-  background radial-gradient(circle, $secondary-color 0%, $secondary-color 80%, $primary-color 100%)
+  background linear-gradient(to bottom, $primary-color 0%, darken($secondary-color, 5%) 35%, lighten($secondary-color, 10%) 100%)
   border 1px solid #e0e0e0
-  border-radius 50%
+  border-radius 5%
   box-shadow 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.3)
   width 500px
-  height 500px
+  height 700px
   overflow hidden
   position relative
   display flex
